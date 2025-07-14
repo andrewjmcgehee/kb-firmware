@@ -15,6 +15,21 @@
             bindings = <&caps_word>;
             key-positions = <24 35>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 23>;
+        };
+
+        ndash {
+            bindings = <&kp LA(MINUS)>;
+            key-positions = <19 20>;
+        };
+
+        mdash {
+            bindings = <&kp LA(LS(MINUS))>;
+            key-positions = <19 20 21>;
+        };
     };
 
     keymap {
@@ -29,10 +44,10 @@
 
             display-name = "alpha";
             bindings = <
-&kp GRAVE         &kp Q    &kp W    &kp F             &kp P      &kp B      &kp J      &kp L          &kp U         &kp Y    &kp APOS  &kp LA(BACKSPACE)
-&kp LEFT_CONTROL  &kp A    &kp R    &kp S             &kp T      &kp G      &kp M      &kp N          &kp E         &kp I    &kp O     &kp LEFT_BRACKET
-&kp LSHFT         &lt 2 Z  &lt 1 X  &kp C             &kp D      &kp V      &kp K      &kp H          &kp COMMA     &kp DOT  &kp FSLH  &kp RSHIFT
-                                    &kp LEFT_COMMAND  &kp ENTER  &kp TAB    &kp SPACE  &kp BACKSPACE  &kp LEFT_ALT
+&kp GRAVE  &kp Q    &kp W    &kp F      &kp P     &kp B               &kp J      &kp L          &kp U         &kp Y    &kp APOS  &kp LA(BSPC)
+&kp ESC    &kp A    &kp R    &kp S      &kp T     &kp G               &kp M      &kp N          &kp E         &kp I    &kp O     &kp ENTER
+&kp LSHFT  &lt 2 Z  &lt 1 X  &kp C      &kp D     &kp V               &kp K      &kp H          &kp COMMA     &kp DOT  &kp FSLH  &kp RSHIFT
+                             &kp LCTRL  &kp LALT  &kp LEFT_COMMAND    &kp SPACE  &kp BACKSPACE  &kp LA(BSPC)
             >;
         };
 
