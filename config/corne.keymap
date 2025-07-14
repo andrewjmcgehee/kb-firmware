@@ -20,16 +20,6 @@
             bindings = <&kp TAB>;
             key-positions = <12 23>;
         };
-
-        ndash {
-            bindings = <&kp LA(MINUS)>;
-            key-positions = <19 20>;
-        };
-
-        mdash {
-            bindings = <&kp LA(LS(MINUS))>;
-            key-positions = <19 20 21>;
-        };
     };
 
     keymap {
