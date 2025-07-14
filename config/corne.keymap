@@ -30,13 +30,13 @@
         toggle-beta {
             bindings = <&tog 1>;
             key-positions = <37 40>;
-            layers = <0 2>;
+            layers = <2 0>;
         };
 
         toggle-gamma {
             bindings = <&tog 2>;
             key-positions = <36 41>;
-            layers = <0 1>;
+            layers = <1 0>;
         };
 
         underscore {
@@ -55,7 +55,7 @@
             // |      |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  |      |
             //                    |     | NUM | ENT |   | SPC | SYM  |     |
 
-            display-name = "𝛼";
+            display-name = "alpha";
             bindings = <
 &kp GRAVE  &kp Q  &kp W  &kp F      &kp P     &kp B               &kp J      &kp L          &kp U         &kp Y    &kp APOS       &kp LA(BSPC)
 &kp TAB    &kp A  &kp R  &kp S      &kp T     &kp G               &kp M      &kp N          &kp E         &kp I    &kp O          &kp ENTER
