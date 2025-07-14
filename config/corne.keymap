@@ -16,9 +16,32 @@
             key-positions = <24 35>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
+        esc {
+            bindings = <&kp ESC>;
             key-positions = <12 23>;
+        };
+
+        toggle-alpha {
+            bindings = <&tog 0>;
+            key-positions = <38 39>;
+            layers = <1 2>;
+        };
+
+        toggle-beta {
+            bindings = <&tog 1>;
+            key-positions = <37 40>;
+            layers = <0 2>;
+        };
+
+        toggle-gamma {
+            bindings = <&tog 2>;
+            key-positions = <36 41>;
+            layers = <0 1>;
+        };
+
+        underscore {
+            bindings = <&kp UNDER>;
+            key-positions = <0 11>;
         };
     };
 
@@ -32,35 +55,35 @@
             // |      |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  |      |
             //                    |     | NUM | ENT |   | SPC | SYM  |     |
 
-            display-name = "alpha";
+            display-name = "𝛼";
             bindings = <
-&kp GRAVE  &kp Q    &kp W    &kp F      &kp P     &kp B               &kp J      &kp L          &kp U         &kp Y    &kp APOS  &kp LA(BSPC)
-&kp ESC    &kp A    &kp R    &kp S      &kp T     &kp G               &kp M      &kp N          &kp E         &kp I    &kp O     &kp ENTER
-&kp LSHFT  &lt 2 Z  &lt 1 X  &kp C      &kp D     &kp V               &kp K      &kp H          &kp COMMA     &kp DOT  &kp FSLH  &kp RSHIFT
-                             &kp LCTRL  &kp LALT  &kp LEFT_COMMAND    &kp SPACE  &kp BACKSPACE  &kp LA(BSPC)
+&kp GRAVE  &kp Q  &kp W  &kp F      &kp P     &kp B               &kp J      &kp L          &kp U         &kp Y    &kp APOS       &kp LA(BSPC)
+&kp TAB    &kp A  &kp R  &kp S      &kp T     &kp G               &kp M      &kp N          &kp E         &kp I    &kp O          &kp ENTER
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp D     &kp V               &kp K      &kp H          &kp COMMA     &kp DOT  &mt BSLH FSLH  &kp RSHIFT
+                         &kp LCTRL  &kp LALT  &kp LEFT_COMMAND    &kp SPACE  &kp BACKSPACE  &kp LA(BSPC)
             >;
         };
 
-        sym {
+        beta {
             bindings = <
-&trans  &kp TILDE  &none   &kp MINUS  &kp LBRC  &kp EXCL            &kp EQUAL  &kp RBRC  &kp PLUS  &kp DQT    &trans    &kp DLLR
-&trans  &kp PIPE   &none   &kp FSLH   &kp LPAR  &kp COLON           &kp SEMI   &kp RPAR  &kp STAR  &kp QMARK  &kp AMPS  &kp AT
-&trans  &kp LT     &trans  &kp HASH   &kp LBKT  &kp PERCENT         &kp UNDER  &kp RBKT  &trans    &trans     &kp GT    &kp CARET
-                           &kp LCTRL  &kp LALT  &kp LEFT_COMMAND    &trans     &trans    &trans
+&trans  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5             &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
+&trans  &kp COLON  &kp LBKT  &kp LBRC  &kp LPAR  &kp EXCLAMATION    &kp EQUAL  &kp RPAR  &kp RBRC  &kp RBKT  &kp SEMI  &trans
+&trans  &kp STAR   &kp PIPE  &kp AMPS  &kp LT    &kp MINUS          &kp PLUS   &kp GT    &trans    &trans    &trans    &trans
+                             &trans    &trans    &trans             &trans     &trans    &trans
             >;
 
-            label = "sym";
+            label = "β";
         };
 
-        num {
+        gamma {
             bindings = <
-&trans  &none   &none  &none      &kp GRAVE  &none       &trans     &kp N7  &kp N8  &kp N9  &kp N0    &kp PRCNT
-&trans  &none   &none  &kp LPAR   &kp RPAR   &none       &kp COMMA  &kp N4  &kp N5  &kp N6  &kp PLUS  &kp MINUS
-&trans  &trans  &none  &kp LT     &kp GT     &none       &kp DOT    &kp N1  &kp N2  &kp N3  &kp STAR  &kp FSLH
-                       &kp LCTRL  &kp LALT   &kp LGUI    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
-            label = "num";
+            label = "𝛾";
         };
     };
 };
