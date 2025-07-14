@@ -24,19 +24,19 @@
         toggle-alpha {
             bindings = <&tog 0>;
             key-positions = <38 39>;
-            layers = <1 2>;
+            timeout-ms = <30>;
         };
 
         toggle-beta {
             bindings = <&tog 1>;
             key-positions = <37 40>;
-            layers = <2 0>;
+            timeout-ms = <30>;
         };
 
         toggle-gamma {
             bindings = <&tog 2>;
             key-positions = <36 41>;
-            layers = <1 0>;
+            timeout-ms = <30>;
         };
 
         underscore {
