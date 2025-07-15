@@ -1,91 +1,72 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+* Copyright (c) 2020 The ZMK Contributors
+*
+* SPDX-License-Identifier: MIT
+*/
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        caps {
-            bindings = <&caps_word>;
-            key-positions = <24 35>;
-        };
-
-        esc {
-            bindings = <&kp ESC>;
-            key-positions = <12 23>;
-        };
-
-        toggle-alpha {
-            bindings = <&tog 0>;
-            key-positions = <38 39>;
-            timeout-ms = <30>;
-        };
-
-        toggle-beta {
-            bindings = <&tog 1>;
-            key-positions = <37 40>;
-            timeout-ms = <30>;
-        };
-
-        toggle-gamma {
-            bindings = <&tog 2>;
-            key-positions = <36 41>;
-            timeout-ms = <30>;
-        };
-
-        underscore {
-            bindings = <&kp UNDER>;
-            key-positions = <0 11>;
-        };
+  combos {
+    compatible = "zmk,combos";
+    caps {
+      bindings = <&caps_word>;
+      key-positions = <24 35>;
     };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        alpha {
-            // --------------------------------------------------------------------------------
-            // |      |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  |      |
-            // |      |  A  |  R  |  S  |  T  |  D  |   |  H  |  N   |  E  |  I  |  O  |      |
-            // |      |  Z  |  X  |  C  |  V  |  B  |   |  K  |  M   |  ,  |  .  |  /  |      |
-            //                    |     | NUM | ENT |   | SPC | SYM  |     |
-
-            display-name = "alpha";
-            bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp F      &kp P     &kp B               &kp J      &kp L          &kp U         &kp Y    &kp APOS       &kp LA(BSPC)
-&kp TAB    &kp A  &kp R  &kp S      &kp T     &kp G               &kp M      &kp N          &kp E         &kp I    &kp O          &kp ENTER
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp D     &kp V               &kp K      &kp H          &kp COMMA     &kp DOT  &mt BSLH FSLH  &kp RSHIFT
-                         &kp LCTRL  &kp LALT  &kp LEFT_COMMAND    &kp SPACE  &kp BACKSPACE  &kp LA(BSPC)
-            >;
-
-            label = "alpha";
-        };
-
-        beta {
-            bindings = <
-&trans  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5             &kp N6     &kp N7    &kp N8    &kp N9    &kp N0    &trans
-&trans  &kp COLON  &kp LBKT  &kp LBRC  &kp LPAR  &kp EXCLAMATION    &kp EQUAL  &kp RPAR  &kp RBRC  &kp RBKT  &kp SEMI  &trans
-&trans  &kp STAR   &kp PIPE  &kp AMPS  &kp LT    &kp MINUS          &kp PLUS   &kp GT    &trans    &trans    &trans    &trans
-                             &trans    &trans    &trans             &trans     &trans    &trans
-            >;
-
-            label = "beta";
-        };
-
-        gamma {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            label = "gamma";
-        };
+    esc {
+      bindings = <&kp ESC>;
+      key-positions = <12 23>;
     };
+    toggle-alpha {
+      bindings = <&tog 0>;
+      key-positions = <38 39>;
+      timeout-ms = <30>;
+    };
+    toggle-beta {
+      bindings = <&tog 1>;
+      key-positions = <37 40>;
+      timeout-ms = <30>;
+    };
+    toggle-gamma {
+      bindings = <&tog 2>;
+      key-positions = <36 41>;
+      timeout-ms = <30>;
+    };
+    underscore {
+      bindings = <&kp UNDER>;
+      key-positions = <0 11>;
+    };
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+    alpha {
+      bindings = <
+        &kp GRAVE &kp Q    &kp W &kp F &kp P &kp B    &kp J     &kp L     &kp U     &kp Y   &kp APOS      &kp LA(BSPC)
+        &kp TAB   &kp A    &kp R &kp S &kp T &kp G    &kp M     &kp N     &kp E     &kp I   &kp O         &kp ENTER
+        &kp LSHFT &kp Z    &kp X &kp C &kp D &kp V    &kp K     &kp H     &kp COMMA &kp DOT &mt BSLH FSLH &kp RSHIFT
+        &kp LCTRL &kp LALT &kp LEFT_COMMAND           &kp SPACE &kp BSPC  &kp LA(BSPC)
+      >;
+      label = "alpha";
+    };
+    beta {
+      bindings = <
+        &trans &kp N1    &kp N2   &kp N3   &kp N4   &kp N5      &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &trans
+        &trans &kp COLON &kp LBKT &kp LBRC &kp LPAR &kp EXCL    &kp EQUAL &kp RPAR &kp RBRC &kp RBKT &kp SEMI &trans
+        &trans &kp STAR  &kp PIPE &kp AMPS &kp LT   &kp MINUS   &kp PLUS  &kp GT   &trans   &trans   &trans   &trans
+        &trans &trans    &trans                                 &trans    &trans   &trans
+      >;
+      label = "beta";
+    };
+    gamma {
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans                            &trans  &trans  &trans
+      >;
+      label = "gamma";
+    };
+  };
 };
