@@ -18,18 +18,18 @@
       bindings = <&kp ESC>;
       key-positions = <12 23>;
     };
-    toggle-alpha {
-      bindings = <&tog 0>;
+    to-alpha {
+      bindings = <&to 0>;
       key-positions = <38 39>;
       timeout-ms = <30>;
     };
-    toggle-beta {
-      bindings = <&tog 1>;
+    to-beta {
+      bindings = <&to 1>;
       key-positions = <37 40>;
       timeout-ms = <30>;
     };
-    toggle-gamma {
-      bindings = <&tog 2>;
+    to-gamma {
+      bindings = <&to 2>;
       key-positions = <36 41>;
       timeout-ms = <30>;
     };
